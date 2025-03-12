@@ -19,8 +19,23 @@ while restart == 'y':
           "Go investigate the smell? 'y' or 'n'.")
     investigate = input("> ")
     if investigate == 'n':
-        print("You shake your head to reset yourself. You're getting distracted. \nPlus, it's probably smarter to avoid unknown smells.")
+        print("You shake your head to reset yourself. You're getting distracted. \nPlus, it's probably smarter to avoid unknown smells.\n")
         ##----Second Obstacle----## this has to be inside the first obstacle's code
+        
+        print("""You continue on your way, holding your breath for as long as you can.
+Near by you hear rustling. You pause, trying to figure out if it was just you.
+However, the rustling continues, and gets louder as you wait.
+Should you run? 'y' or 'n'.""")
+        run = input("> ")
+        if run == 'n':
+            print("""You stand still, your breath shallow. You feel a cold breeze brush by you.
+You can't see anything, but you know something is there. After a few seconds, everything feels at ease. It's gone.""")
+            ##----Third Obstacle----## this has to be inside the second obstacle's code
+        else:
+            print("""Panicking, you start to run. As you do, you find yourself short of breath.
+Suddenly, something grabs you. Your breath leaves you, as you slowly choke. You can't see anything, but you know something is there.""")
+            print("""You died!! Game over!!""")
+             
     else:
         print("You follow the smell, going deeper into the forest, and off the trail you set. \n"
               "After a while of searching, you come across a heap in the ground. \n"
@@ -33,8 +48,6 @@ while restart == 'y':
         
         print("You died!! Game over!!")
               
-    
-    ##----Third Obstacle----## this has to be inside the second obstacle's code
     
     ##This stuff below can't be part of game conclusion, instead has to be part of obstacle 3
     print("The bright light of day hits you, and you squint your eyes. In front of you lies a small box. \n"
