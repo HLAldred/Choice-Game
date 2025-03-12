@@ -1,0 +1,34 @@
+##----Text Based Choice Game - 3/11/25----##
+
+
+##----Functions----##
+
+
+##----Main Code----##
+
+import time #this allows for pauses in the program as it runs
+restart = 'y'
+while restart == 'y':
+    print("You are a hero looking for the legendary treasure of the long lost king. \n"
+          "You start towards the forest on your biggest adventure yet. What could possibly go wrong? \n")
+    ##----First Obstacle----##
+    
+    ##----Second Obstacle----##
+    
+    ##----Third Obstacle----##
+    
+    ##----Game Conclusion----##
+    print("The bright light of day hits you, and you squint your eyes. In front of you lies a small box. \n"
+          "You approach it cautiously and open it slowly. Inside there is a shiny ring. You pick it up and put it on. \n"
+          "It's a perfect fit. In the distance, you hear a quiet humming. It's probably nothing.\n \n")
+    
+    time.sleep(1)
+    
+    print("End of Game. "
+          "You survived and got the treasure! \n"
+          "Would you like to play again? 'y' or 'n'")
+    again = input("> ")
+    if again == 'y':
+        restart = 'y'
+    else:
+        restart = 'n'
