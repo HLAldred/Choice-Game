@@ -13,11 +13,30 @@ while restart == 'y':
           "You start towards the forest on your biggest adventure yet. What could possibly go wrong? \n")
     ##----First Obstacle----##
     
-    ##----Second Obstacle----##
+    print("Upon entering the forest, you're hit with a putrid smell.\n"
+          "Your face scrunches. It smells awful. You look around, trying to find where it's coming from. \n"
+          "You can't see anything in your immediate area. \n"
+          "Go investigate the smell? 'y' or 'n'.")
+    investigate = input("> ")
+    if investigate == 'n':
+        print("You shake your head to reset yourself. You're getting distracted. \nPlus, it's probably smarter to avoid unknown smells.")
+        ##----Second Obstacle----## this has to be inside the first obstacle's code
+    else:
+        print("You follow the smell, going deeper into the forest, and off the trail you set. \n"
+              "After a while of searching, you come across a heap in the ground. \n"
+              "The smell is the strongest here. Staring down at the heap, you choke back a gag.\n"
+              "You slowly begin uncovering the heap with your foot, holding your breath.\n"
+              "After moving enough leaves, you find a half rotten corpse looking back at you.\n"
+              "With a scream of shock you take a step back.\n"
+              "You trip, and yelp with surprise.\n"
+              "Losing your footing, you slip and break your neck.")
+        
+        print("You died!! Game over!!")
+              
     
-    ##----Third Obstacle----##
+    ##----Third Obstacle----## this has to be inside the second obstacle's code
     
-    ##----Game Conclusion----##
+    ##This stuff below can't be part of game conclusion, instead has to be part of obstacle 3
     print("The bright light of day hits you, and you squint your eyes. In front of you lies a small box. \n"
           "You approach it cautiously and open it slowly. Inside there is a shiny ring. You pick it up and put it on. \n"
           "It's a perfect fit. In the distance, you hear a quiet humming. It's probably nothing.\n \n")
@@ -25,8 +44,10 @@ while restart == 'y':
     time.sleep(1)
     
     print("End of Game. "
-          "You survived and got the treasure! \n"
-          "Would you like to play again? 'y' or 'n'")
+          "You survived and got the treasure! \n")
+    
+    ##----Game Conclusion----## - Had to move this so that the else code ran properly
+    print("Would you like to play again? 'y' or 'n'")
     again = input("> ")
     if again == 'y':
         restart = 'y'
