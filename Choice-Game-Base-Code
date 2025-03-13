@@ -11,22 +11,69 @@ restart = 'y'
 while restart == 'y':
     print("You are a hero looking for the legendary treasure of the long lost king. \n"
           "You start towards the forest on your biggest adventure yet. What could possibly go wrong? \n")
+
     ##----First Obstacle----##
+    print("Upon entering the forest, you're hit with a putrid smell.\n"
+          "Your face scrunches. It smells awful. You look around, trying to find where it's coming from. \n"
+          "You can't see anything in your immediate area. \n"
+          "Go investigate the smell? 'y' or 'n'.")
+    investigate = input("> ")
+    if investigate == 'n':
+        print("You shake your head to reset yourself. You're getting distracted. \nPlus, it's probably smarter to avoid unknown smells.\n")
+        
+        ##----Second Obstacle----## this has to be inside the first obstacle's code
+        print("""You continue on your way, holding your breath for as long as you can.
+Near by you hear rustling. You pause, trying to figure out if it was just you.
+However, the rustling continues, and gets louder as you wait.
+Should you run? 'y' or 'n'.""")
+        run = input("> ")
+        if run == 'n':
+            print("""You stand still, your breath shallow. You feel a cold breeze brush by you.
+You can't see anything, but you know something is there. After a few seconds, everything feels at ease. It's gone.
+""")
+            
+            ##----Third Obstacle----## this has to be inside the second obstacle's code
+            print("""You pick up your pace, wanting to get out of here sooner rather than later. This wasn't as fun as you had hoped.
+You come across a log blocking your path. You sigh in frustration, although this was the most normal problem you had come across so far.""")
+            print("Move the log out of the way? 'y' or 'n'.")
+            move = input("> ")
+            if move == 'y':
+                print("""You nudge the log with your foot. Nothing happens. It's heavier than you had expected.
+Bending down, you push the log with both hands. With a bit of force. You're able to move it out of the way.
+Heaving a sigh of relief, you continue down the path. In the distance, you can see the forest exit.""")
+                
+                print("""As you leave the forest, the bright light of day hits you, and you squint your eyes. In front of you lies a small box.
+You approach it cautiously and open it. Inside there is a shiny ring. You pick it up and put it on
+It's a perfect fit. In the distance, you hear a quiet humming. It's probably nothing.\n \n""")
+                time.sleep(1)
+                print("""End of Game!
+You survived and got the treasure!""")
+            else:
+                print("""Rolling your eyes, you turn to your right and start walking. You couldn't be bothered to move the log.
+The leaf covered forest ground beneath your feel crunched as you walked. Suddenly, you feel it give out underneath you.
+You walked right into a trap: a leaf covered hole, deep enough to break the legs upon impact with the ground.
+There's no getting out.""")
+                print("""You died!! Game over!!""")
+                
+        else:
+            print("""Panicking, you start to run. As you do, you find yourself short of breath.
+Suddenly, something grabs you. Your breath leaves you, as you slowly choke. You can't see anything, but you know something is there.""")
+            print("""You died!! Game over!!""")
+             
+    else:
+        print("You follow the smell, going deeper into the forest, and off the trail you set. \n"
+              "After a while of searching, you come across a heap in the ground. \n"
+              "The smell is the strongest here. Staring down at the heap, you choke back a gag.\n"
+              "You slowly begin uncovering the heap with your foot, holding your breath.\n"
+              "After moving enough leaves, you find a half rotten corpse looking back at you.\n"
+              "With a scream of shock you take a step back.\n"
+              "You trip, and yelp with surprise.\n"
+              "Losing your footing, you slip and break your neck.")
+        
+        print("You died!! Game over!!")
     
-    ##----Second Obstacle----##
-    
-    ##----Third Obstacle----##
-    
-    ##----Game Conclusion----##
-    print("The bright light of day hits you, and you squint your eyes. In front of you lies a small box. \n"
-          "You approach it cautiously and open it slowly. Inside there is a shiny ring. You pick it up and put it on. \n"
-          "It's a perfect fit. In the distance, you hear a quiet humming. It's probably nothing.\n \n")
-    
-    time.sleep(1)
-    
-    print("End of Game. "
-          "You survived and got the treasure! \n"
-          "Would you like to play again? 'y' or 'n'")
+    ##----Game Conclusion----## - Had to move this so that the else code ran properly
+    print("Would you like to play again? 'y' or 'n'")
     again = input("> ")
     if again == 'y':
         restart = 'y'
