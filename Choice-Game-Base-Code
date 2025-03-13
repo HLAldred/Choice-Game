@@ -1,4 +1,4 @@
-##----Text Based Choice Game - 3/11/25----##
+##----Text Based Choice Game - 3/13/25----##
 
 
 ##----Functions----##
@@ -20,8 +20,8 @@ while restart == 'y':
     investigate = input("> ")
     if investigate == 'n':
         print("You shake your head to reset yourself. You're getting distracted. \nPlus, it's probably smarter to avoid unknown smells.\n")
-        ##----Second Obstacle----## this has to be inside the first obstacle's code
         
+        ##----Second Obstacle----## this has to be inside the first obstacle's code
         print("""You continue on your way, holding your breath for as long as you can.
 Near by you hear rustling. You pause, trying to figure out if it was just you.
 However, the rustling continues, and gets louder as you wait.
@@ -29,8 +29,32 @@ Should you run? 'y' or 'n'.""")
         run = input("> ")
         if run == 'n':
             print("""You stand still, your breath shallow. You feel a cold breeze brush by you.
-You can't see anything, but you know something is there. After a few seconds, everything feels at ease. It's gone.""")
+You can't see anything, but you know something is there. After a few seconds, everything feels at ease. It's gone.
+""")
+            
             ##----Third Obstacle----## this has to be inside the second obstacle's code
+            print("""You pick up your pace, wanting to get out of here sooner rather than later. This wasn't as fun as you had hoped.
+You come across a log blocking your path. You sigh in frustration, although this was the most normal problem you had come across so far.""")
+            print("Move the log out of the way? 'y' or 'n'.")
+            move = input("> ")
+            if move == 'y':
+                print("""You nudge the log with your foot. Nothing happens. It's heavier than you had expected.
+Bending down, you push the log with both hands. With a bit of force. You're able to move it out of the way.
+Heaving a sigh of relief, you continue down the path. In the distance, you can see the forest exit.""")
+                
+                print("""As you leave the forest, the bright light of day hits you, and you squint your eyes. In front of you lies a small box.
+You approach it cautiously and open it. Inside there is a shiny ring. You pick it up and put it on
+It's a perfect fit. In the distance, you hear a quiet humming. It's probably nothing.\n \n""")
+                time.sleep(1)
+                print("""End of Game!
+You survived and got the treasure!""")
+            else:
+                print("""Rolling your eyes, you turn to your right and start walking. You couldn't be bothered to move the log.
+The leaf covered forest ground beneath your feel crunched as you walked. Suddenly, you feel it give out underneath you.
+You walked right into a trap: a leaf covered hole, deep enough to break the legs upon impact with the ground.
+There's no getting out.""")
+                print("""You died!! Game over!!""")
+                
         else:
             print("""Panicking, you start to run. As you do, you find yourself short of breath.
 Suddenly, something grabs you. Your breath leaves you, as you slowly choke. You can't see anything, but you know something is there.""")
@@ -47,17 +71,6 @@ Suddenly, something grabs you. Your breath leaves you, as you slowly choke. You 
               "Losing your footing, you slip and break your neck.")
         
         print("You died!! Game over!!")
-              
-    
-    ##This stuff below can't be part of game conclusion, instead has to be part of obstacle 3
-    print("The bright light of day hits you, and you squint your eyes. In front of you lies a small box. \n"
-          "You approach it cautiously and open it slowly. Inside there is a shiny ring. You pick it up and put it on. \n"
-          "It's a perfect fit. In the distance, you hear a quiet humming. It's probably nothing.\n \n")
-    
-    time.sleep(1)
-    
-    print("End of Game. "
-          "You survived and got the treasure! \n")
     
     ##----Game Conclusion----## - Had to move this so that the else code ran properly
     print("Would you like to play again? 'y' or 'n'")
